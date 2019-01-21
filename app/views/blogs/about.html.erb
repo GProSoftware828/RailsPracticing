@@ -1,0 +1,92 @@
+<div class="app-card-container">
+  <div class="card">
+    <div class="skill">
+      <%= image_tag "computer_code.jpg", width: '78%', alt: "code", class: "about-img" %>
+    </div>
+    <div class="skill">
+      <h2>Percentage of My Portfolio Per Language:</h2>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="skills">
+        <% @skills.each do |skill| %>
+          <div class="skill">
+            <h4><%= skill.title %></h4>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-warning"
+                role="progressbar"
+                aria-valuenow="<%= skill.percent_utilized %>"
+                aria-valuemax="100"
+                style="width: <%= skill.percent_utilized %>%"
+              ></div>
+            </div>
+          </div>
+        <% end %>
+        <p>
+        "Experiences include working on and submitting Basecamp to-do tasks directly to the client and designing my copyrighted software based on multi-language possibilities. I engage in several blog communities and attend programming events. My unique coding background of fictional publishing has made me a mid-level programmer with senior level expertise."
+        </p><br /><p>
+        "As an example: download repository release 4.1.4 of this portfolio and follow the instructions in the comments after browsing (to see site_admin features such as drag-and-drop sorting of code example models): <a href="https://github.com/GProSoftware828/devcamp-portfolio/releases/tag/4.1.4">Version 4.1.4</a>"
+        </p><br />
+        <p>
+        <div class="card-button">
+          <button
+            class="btn btn-primary"
+              type="button"
+              data-toggle="collapse"
+              data-target="#resume"
+              aria-expanded="false"
+              aria-controller="resume"
+          >
+          Resume
+          </button>
+        </div>
+        </p>
+        </div>
+        <p>
+          <div class="row">
+            <div class="collapse" id="resume">
+              <div class="card-block">
+                <h2>Internet Builder Consultants - ASP with MySQL, PHP, VBScript, JavaScript</h2><br/>
+                <p>2018</p><br/>
+                <p>I worked under the senior developer during a temporary company revitalization phase and submitted website updates that I tested in nGinX drectly to the client via Basecamp.</p><br />
+                <p>https://www.internetbuilderconsulting.com</p>
+              </div>
+              <div class="card-block">
+                <h2>Hummingbird - C++, JavaScript, Ruby</h2><br/>
+                <p>2012-2018</p><br/>
+                <p>C++ maturity rating scan for books, experiments in Ruby and JavaScript, possible patents involved in the long term</p><br />
+                <p>Copyrighted software owned by George Payne in USA from 2016</p>
+                <p>Large software development phase 2012-2016 = 2.5 second performance (each book scan)</p>
+              </div>
+              <div class="card-block">
+                <h2>Narrati√ - Ruby on Rails</h2><br/>
+                <p>2016-2018</p><br/>
+                <p>I programmed this start-up application and outsourced to freelancers via Upwork.com to stay on schedule.</p><br />
+                <p>A social media alternative to self-publishing that instantly monetizes your book</p><br />
+                <p>In development for eventual showcasing to investors</p><br />
+              </div>
+              <div class="card-block">
+                <h2>www.authorgeorgiepayne.com - HTML5, CSS3, jQuery, JavaScript</h2><br/>
+                <p>2016-2019</p><br/>
+                <p>My first live project as a programmer was this static personal website hosted via FileZilla on cPanel.</p><br />
+                <p>jQuery alerts, CSS3 animations, HTML5 nav bar, Google email sign-up API</p><br />
+                <p>It had a link to watch my indie movie on Vimeo via PayPal for $1.50.</p><br />
+                <p>I ran a blog based on psychology in entertainment (see Blog section of this portfolio).</p><br />
+              </div>
+              <br /><br /><br />
+                <p style="color:black;">Drag and drop to desktop:</p>
+                <div class="res-img">
+                  <a href="http://tinypic.com?ref=16k6zh1" target="_blank"><img src="http://i65.tinypic.com/16k6zh1.jpg" border="0" alt="Geroge Payne Resume"></a>
+                </div>
+              <div class="card-block">
+                <%= image_tag "Payne_G_CV.jpg", alt: "code", class: "about-img" %>
+              </div>
+            </div>       
+          </div>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
